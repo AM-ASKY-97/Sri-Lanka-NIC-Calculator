@@ -72,7 +72,7 @@
                     </div>
 
                     <div class="col mt-3">
-                        <button type="submit" id="btn" class="btn btn-success text-center" name="submit" >Submit</button>
+                        <button type="submit" id="btn" class="btn btn-success text-center" name="submit" >Calculate</button>
                     </div>
                 </div>
 
