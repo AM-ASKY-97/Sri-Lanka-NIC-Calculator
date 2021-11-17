@@ -11,20 +11,50 @@
     <link rel="stylesheet" href="Asseets/style.css">
 </head>
   <body>
+
+  <?php
+        
+        
+        if(isset($_POST['submit']))
+        {
+                $hours_in_day   = 24;
+                $minutes_in_hour= 60;
+                $seconds_in_mins= 60;
+
+                $datei = $_POST['B_date'];
+                
+                $birth_date     = new DateTime($datei);
+                $current_date   = new DateTime();
+                
+                $diff           = $birth_date->diff($current_date);
+                
+                
+                $years     = $diff->y; ;
+                $months    = ($diff->y * 12) + $diff->m ; 
+                $weeks     = floor($diff->days/7);
+                $days      = $diff->days . " days"; 
+                $hours     = $diff->h + ($diff->days * $hours_in_day); 
+                $mins      = $diff->h + ($diff->days * $hours_in_day * $minutes_in_hour) ; 
+                $seconds   = $diff->h + ($diff->days * $hours_in_day * $minutes_in_hour * $seconds_in_mins) ; 
+        }
+                
+        
+        
+    ?>
       
    <div class="container">
        <div class="row">
-          <div class="col mt-5">
-              <form method="post" action='<?php echo $_SERVER['PHP_SELF']; ?>'>
+          <div class="col mt-3">
+              <form method="post" action="">
                 <input type="date" class="form-control" name="B_date" id="">
 
                 <div class="row ">
                     <div class="col mt-3">
-                        <button type="reset"  id="btn" class="btn btn-danger text-center"><i class="fa fa-ban" aria-hidden="true"></i><span>Reset all</span></button>
+                        <button type="reset"   id="btn" class="btn btn-danger text-center"><i class="fa fa-ban" aria-hidden="true"></i><span>Reset all</span></button>
                     </div>
 
                     <div class="col mt-3">
-                        <button type="button"  id="btn" class="btn btn-success text-center" name="submit" ><i class="fa fa-ban" aria-hidden="true"></i><span>Submit</span></button>
+                        <button type="submit" id="btn" class="btn btn-success text-center" name="submit" >Submit</button>
                     </div>
                 </div>
 
@@ -37,7 +67,7 @@
                 <div class="card">
                     <ul class="list-group list-group-flush">
                     <li class="list-group-item text-center">Year</li>
-                    <li class="list-group-item">0</li>
+                    <li class="list-group-item"><?php echo $years ?></li>
                     <li class="list-group-item"></li>
                     </ul>
                 </div>
@@ -47,7 +77,7 @@
                 <div class="card">
                     <ul class="list-group list-group-flush">
                     <li class="list-group-item text-center">Month</li>
-                    <li class="list-group-item">0</li>
+                    <li class="list-group-item"><?php echo  $months ?></li>
                     <li class="list-group-item"></li>
                     </ul>
                 </div>
@@ -59,7 +89,7 @@
                 <div class="card">
                     <ul class="list-group list-group-flush">
                     <li class="list-group-item text-center">Weeks</li>
-                    <li class="list-group-item">0</li>
+                    <li class="list-group-item"><?php echo $weeks ?></li>
                     <li class="list-group-item"></li>
                     </ul>
                 </div>
@@ -69,7 +99,7 @@
                 <div class="card">
                     <ul class="list-group list-group-flush">
                     <li class="list-group-item text-center">Days</li>
-                    <li class="list-group-item">0</li>
+                    <li class="list-group-item"><?php echo $days ?></li>
                     <li class="list-group-item"></li>
                     </ul>
                 </div>
@@ -81,7 +111,7 @@
                 <div class="card">
                     <ul class="list-group list-group-flush">
                     <li class="list-group-item text-center">Hours</li>
-                    <li class="list-group-item">0</li>
+                    <li class="list-group-item"><?php echo $hours ?></li>
                     <li class="list-group-item"></li>
                     </ul>
                 </div>
@@ -91,40 +121,16 @@
                 <div class="card">
                     <ul class="list-group list-group-flush">
                     <li class="list-group-item text-center">minutest</li>
-                    <li class="list-group-item">0</li>
+                    <li class="list-group-item"><?php echo $mins ?></li>
                     <li class="list-group-item"></li>
                     </ul>
                 </div>
             </div>
         </div>
+        
     </div>
 
-    <?php
-        
-        if (!isset($_POST['submit']))
-
-        {
-                $hours_in_day   = 24;
-                $minutes_in_hour= 60;
-                $seconds_in_mins= 60;
-                
-                $birth_date     = new DateTime("1988-07-31T00:00:00");
-                $current_date   = new DateTime();
-                
-                $diff           = $birth_date->diff($current_date);
-                
-                echo $years     = $diff->y . " years " . $diff->m . " months " . $diff->d . " day(s)"; echo "<br/>";
-                echo $months    = ($diff->y * 12) + $diff->m . " months " . $diff->d . " day(s)"; echo "<br/>";
-                echo $weeks     = floor($diff->days/7) . " weeks " . $diff->d%7 . " day(s)"; echo "<br/>";
-                echo $days      = $diff->days . " days"; echo "<br/>";
-                echo $hours     = $diff->h + ($diff->days * $hours_in_day) . " hours"; echo "<br/>";
-                echo $mins      = $diff->h + ($diff->days * $hours_in_day * $minutes_in_hour) . " minutest"; echo "<br/>";
-                echo $seconds   = $diff->h + ($diff->days * $hours_in_day * $minutes_in_hour * $seconds_in_mins) . " seconds"; echo "<br/>";
-        }
-                
-        
-        
-    ?>
+  
     
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
