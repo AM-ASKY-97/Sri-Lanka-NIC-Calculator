@@ -20,6 +20,12 @@
                 $hours_in_day   = 24;
                 $minutes_in_hour= 60;
                 $seconds_in_mins= 60;
+                $years = 0;
+                $month = 0;
+                $weeks =0;
+                $days = 0;
+                $mins = 0;
+                $seconds =0;
 
                 $datei = $_POST['B_date'];
                 
@@ -32,7 +38,7 @@
                 $years     = $diff->y; ;
                 $months    = ($diff->y * 12) + $diff->m ; 
                 $weeks     = floor($diff->days/7);
-                $days      = $diff->days . " days"; 
+                $days      = $diff->days; 
                 $hours     = $diff->h + ($diff->days * $hours_in_day); 
                 $mins      = $diff->h + ($diff->days * $hours_in_day * $minutes_in_hour) ; 
                 $seconds   = $diff->h + ($diff->days * $hours_in_day * $minutes_in_hour * $seconds_in_mins) ; 
@@ -45,7 +51,7 @@
    <div class="container">
        <div class="row">
           <div class="col mt-3">
-              <form method="post" action="">
+              <form method="post">
                 <input type="date" class="form-control" name="B_date" id="">
 
                 <div class="row ">
