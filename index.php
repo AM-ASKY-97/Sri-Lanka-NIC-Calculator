@@ -52,7 +52,8 @@
        <div class="row">
           <div class="col mt-3">
               <form method="post">
-                <input type="date" class="form-control" name="B_date" id="">
+                <label for="">Plese Enter Your Date Of Birth</label>
+                <input type="text" class="form-control" name="B_date" id="" placeholder="dd-mm-yyyy">
 
                 <div class="row ">
                     <div class="col mt-3">
