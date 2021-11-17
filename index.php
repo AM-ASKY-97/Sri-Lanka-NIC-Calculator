@@ -17,11 +17,12 @@
             <?php 
                 
                 $years = 0;
-                $month = 0;
+                $months = 0;
                 $weeks =0;
                 $days = 0;
                 $mins = 0;
                 $seconds =0;
+                $hours =0;
             ?>    
         });
     </script>
