@@ -6,9 +6,25 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="Asseets/style.css">
+
+    <script>
+        $(document).ready(function(){
+            alert ("Welcome To our website");
+            <?php 
+                
+                $years = 0;
+                $month = 0;
+                $weeks =0;
+                $days = 0;
+                $mins = 0;
+                $seconds =0;
+            ?>    
+        });
+    </script>
 </head>
   <body>
 
@@ -20,12 +36,7 @@
                 $hours_in_day   = 24;
                 $minutes_in_hour= 60;
                 $seconds_in_mins= 60;
-                $years = 0;
-                $month = 0;
-                $weeks =0;
-                $days = 0;
-                $mins = 0;
-                $seconds =0;
+                
 
                 $datei = $_POST['B_date'];
                 
@@ -136,6 +147,8 @@
         </div>
         
     </div>
+
+    
 
   
     
