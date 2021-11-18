@@ -38,7 +38,7 @@
         });
     </script>
 </head>
-  <body style="font-family: 'Crimson Text', serif;">
+  <body style="font-family: 'Crimson Text', serif; font-size:20px;">
 
   <?php
         
@@ -379,7 +379,7 @@
         </div>
 
         <!-- Footer -->
-        <div class="row text-center mt-4">
+        <div class="row text-center mt-4 ">
                 <div class="col bg-dark text-light text-uppercase pt-3">
                     <h6>&#169 Copyright 2021. All right reserved. </h6> 
                     <p>| Designed By : <a href="https://am-asky-resume.herokuapp.com/"> A.M. Asky</a> </p>
