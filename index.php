@@ -15,19 +15,19 @@
         $(document).ready(function(){
             <?php 
                 
-                $years = 00;
-                $months = 00;
-                $weeks =00;
-                $days = 00;
-                $mins = 00;
-                $seconds =00;
-                $hours =00;
-                $user_date =00;
-                $yaer = 00;
-                $month =00;
-                $day =00;
-                $m =00;
-                $d =00;
+                $years = 0;
+                $months =0;
+                $weeks =0;
+                $days = 0;
+                $mins = 0;
+                $seconds =0;
+                $hours =0;
+                $user_date =0;
+                $yaer = 0;
+                $month =0;
+                $day =0;
+                $m =0;
+                $d =0;
             ?>    
         });
     </script>
