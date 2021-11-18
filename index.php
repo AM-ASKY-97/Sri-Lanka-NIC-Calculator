@@ -256,7 +256,7 @@
           <div class="col mt-3">
               <form method="post">
             
-                <input type="text" class="form-control" name="nic" id="" placeholder="Plese Enter Your NIC number" Required>
+                <input type="text" class="form-control" name="nic" id="" placeholder="Please Enter Your NIC number" Required>
 
                 <div class="row ">
                     <div class="col mt-3">
@@ -361,7 +361,6 @@
                             <div class="col">Months</div>
                             <div class="col">Weeks</div>
                             <div class="col">Days</div>
-                            <div class="col">Hours</div>
 
                         </div>
 
@@ -369,12 +368,37 @@
                             <div class="col"><?php echo $months ?></div>
                             <div class="col"><?php echo $weeks ?></div>
                             <div class="col"><?php echo  $days ?></div>
-                            <div class="col"><?php echo $hours ?></div>
+                           
                         </div>
                     </ul>
                 </div>
            </div>
 
+
+
+           <div class="col-lg-6 mt-3">
+                <div class="card">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item bg-dark text-white">
+                        <div class="row">
+                            <div class="col">Living Hours : </div>
+                        </div></li>
+                        <div class="row text-center mt-1">
+                            <div class="col">Hours</div>
+                            <div class="col">Minutes</div>
+                            <div class="col">Seconds</div>
+                            
+
+                        </div>
+
+                        <div class="row text-center mt-1 mb-1">
+                            <div class="col"><?php echo $hours ?></div>
+                            <div class="col"><?php echo $mins ?></div>
+                            <div class="col"><?php echo  $seconds ?></div>
+                        </div>
+                    </ul>
+                </div>
+           </div>
 
         </div>
 
