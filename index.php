@@ -30,6 +30,7 @@
                 $d ="00";
                 $unic="Processing.....";
                 $gender ="Processing.....";
+                $len=0;
             ?>    
         });
     </script>
@@ -43,9 +44,13 @@
             
             $nic = $_POST['nic'];
 
-            $unic = $nic;
-
+        
             $len = strlen($nic);
+
+            if ($len==12 || $len ==10)
+            {
+                $unic = $nic;
+            }
         
             if ($len == 12)
             {
@@ -210,9 +215,15 @@
         
             else
             {
-                echo "Wrong NIc Number";
+                ?> 
+                <script>
+                    alert ("This is an Invalid NIC number !");
+                </script>
+                <?php
             }
         
+           if ($len==12 || $len ==10)
+           {
             $hours_in_day   = 24;
             $minutes_in_hour= 60;
             $seconds_in_mins= 60;
@@ -232,6 +243,7 @@
             $hours     = $diff->h + ($diff->days * $hours_in_day); 
             $mins      = $diff->h + ($diff->days * $hours_in_day * $minutes_in_hour) ; 
             $seconds   = $diff->h + ($diff->days * $hours_in_day * $minutes_in_hour * $seconds_in_mins) ; 
+           }
 
         }
     ?>
@@ -315,7 +327,7 @@
                 <div class="card">
                     <ul class="list-group list-group-flush">
                         <li class="list-group-item bg-dark text-white">
-                        <div class="row">
+                        <div class="row " >
                             <div class="col">Age : </div>
                         </div></li>
                         <div class="row text-center mt-1">
