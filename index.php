@@ -362,6 +362,7 @@
                             <div class="col">Weeks</div>
                             <div class="col">Days</div>
                             <div class="col">Hours</div>
+                            <div class="col">Minutes</div>
 
                         </div>
 
@@ -370,6 +371,7 @@
                             <div class="col"><?php echo $weeks ?></div>
                             <div class="col"><?php echo  $days ?></div>
                             <div class="col"><?php echo $hours ?></div>
+                            <div class="col"><?php echo $mins ?></div>
                         </div>
                     </ul>
                 </div>
