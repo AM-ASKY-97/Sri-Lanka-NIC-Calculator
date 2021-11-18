@@ -381,7 +381,7 @@
                     <ul class="list-group list-group-flush">
                         <li class="list-group-item bg-dark text-white">
                         <div class="row">
-                            <div class="col">Time : </div>
+                            <div class="col">Living hours: </div>
                         </div></li>
                         <div class="row text-center mt-1">
                             <div class="col">Hours</div>
