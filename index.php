@@ -13,7 +13,6 @@
 
     <script>
         $(document).ready(function(){
-            alert ("Welcome To our website");
             <?php 
                 
                 $years = 0;
@@ -64,14 +63,10 @@
        <div class="row">
           <div class="col mt-3">
               <form method="post">
-                <label for="">Plese Enter Your Date Of Birth</label>
-                <input type="text" class="form-control" name="B_date" id="" placeholder="dd-mm-yyyy">
+            
+                <input type="text" class="form-control" name="B_date" id="" placeholder="Plese Enter Your NIC number" Required>
 
                 <div class="row ">
-                    <div class="col mt-3">
-                        <button type="reset"   id="btn" class="btn btn-danger text-center"><i class="fa fa-ban" aria-hidden="true"></i><span>Reset all</span></button>
-                    </div>
-
                     <div class="col mt-3">
                         <button type="submit" id="btn" class="btn btn-success text-center" name="submit" >Calculate</button>
                     </div>
@@ -82,73 +77,84 @@
        </div>
 
        <div class="row">
-           <div class="col mt-3">
+           <div class="col-lg-6 mt-3">
                 <div class="card">
                     <ul class="list-group list-group-flush">
-                    <li class="list-group-item text-center">Year</li>
-                    <li class="list-group-item"><?php echo $years ?></li>
-                    <li class="list-group-item"></li>
+                        <li class="list-group-item">
+                        <div class="row">
+                            <div class="col">Date of Birth : </div>
+                        </div></li>
+                        <div class="row text-center mt-1">
+                            <div class="col">Year</div>
+                            <div class="col">Month</div>
+                            <div class="col">Day</div>
+                        </div>
+
+                        <div class="row text-center mt-1">
+                            <div class="col">1997</div>
+                            <div class="col">10</div>
+                            <div class="col">02</div>
+                        </div>
                     </ul>
                 </div>
            </div>
 
-           <div class="col mt-3">
-                <div class="card">
-                    <ul class="list-group list-group-flush">
-                    <li class="list-group-item text-center">Month</li>
-                    <li class="list-group-item"><?php echo  $months ?></li>
-                    <li class="list-group-item"></li>
-                    </ul>
-                </div>
-            </div>
-       </div>
+           
 
-       <div class="row">
-            <div class="col mt-3">
+           <div class="col-lg-6 mt-3">
                 <div class="card">
                     <ul class="list-group list-group-flush">
-                    <li class="list-group-item text-center">Weeks</li>
-                    <li class="list-group-item"><?php echo $weeks ?></li>
-                    <li class="list-group-item"></li>
-                    </ul>
-                </div>
-            </div>
+                        <li class="list-group-item">
+                        <div class="row">
+                            <div class="col">Age : </div>
+                        </div></li>
+                        <div class="row text-center mt-1">
+                            <div class="col">Year</div>
+                            <div class="col">Month</div>
+                            <div class="col">Day</div>
+                        </div>
 
-            <div class="col mt-3">
-                <div class="card">
-                    <ul class="list-group list-group-flush">
-                    <li class="list-group-item text-center">Days</li>
-                    <li class="list-group-item"><?php echo $days ?></li>
-                    <li class="list-group-item"></li>
+                        <div class="row text-center mt-1">
+                            <div class="col">1997</div>
+                            <div class="col">10</div>
+                            <div class="col">02</div>
+                        </div>
                     </ul>
                 </div>
-            </div>
-       </div>
+           </div>
 
-       <div class="row">
-            <div class="col mt-3">
-                <div class="card">
-                    <ul class="list-group list-group-flush">
-                    <li class="list-group-item text-center">Hours</li>
-                    <li class="list-group-item"><?php echo $hours ?></li>
-                    <li class="list-group-item"></li>
-                    </ul>
-                </div>
-            </div>
 
-            <div class="col mt-3">
+
+           <div class="col-lg-6 mt-3">
                 <div class="card">
                     <ul class="list-group list-group-flush">
-                    <li class="list-group-item text-center">minutest</li>
-                    <li class="list-group-item"><?php echo $mins ?></li>
-                    <li class="list-group-item"></li>
+                        <li class="list-group-item">
+                        <div class="row">
+                            <div class="col">Extra (Total) : </div>
+                        </div></li>
+                        <div class="row text-center mt-1">
+                            <div class="col">Months</div>
+                            <div class="col">Weeks</div>
+                            <div class="col">Days</div>
+                            <div class="col">Hours</div>
+
+                        </div>
+
+                        <div class="row text-center mt-1">
+                            <div class="col">00</div>
+                            <div class="col">00</div>
+                            <div class="col">00</div>
+                            <div class="col">00</div>
+                        </div>
                     </ul>
                 </div>
-            </div>
+           </div>
+
+
         </div>
 
         <!-- Footer -->
-        <div class="row text-center">
+        <div class="row text-center mt-2">
                 <div class="col bg-dark text-light text-uppercase pt-3">
                     <h6>&#169 Copyright 2021. All right reserved. </h6> 
                     <p>| Designed By : <a href="https://am-asky-resume.herokuapp.com/"> A.M. Asky</a> </p>
