@@ -38,7 +38,7 @@
         });
     </script>
 </head>
-  <body style="font-family: 'Crimson Text', serif; font-size:20px;">
+  <body style="font-family: 'Crimson Text', serif; font-size:16px;">
 
   <?php
         
