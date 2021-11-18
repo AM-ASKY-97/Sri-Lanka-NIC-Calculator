@@ -254,7 +254,7 @@
    <div class="container " style="background-color: #6a46bc;">
        <div class="row">
           <div class="col mt-3">
-              <form method="post">
+              <form method="post" autocomplete="off">
             
                 <input type="text" class="form-control" name="nic" id="" placeholder="Please Enter Your NIC number" Required>
 
