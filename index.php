@@ -15,56 +15,220 @@
         $(document).ready(function(){
             <?php 
                 
-                $years = 0;
-                $months = 0;
-                $weeks =0;
-                $days = 0;
-                $mins = 0;
-                $seconds =0;
-                $hours =0;
+                $years = 00;
+                $months = 00;
+                $weeks =00;
+                $days = 00;
+                $mins = 00;
+                $seconds =00;
+                $hours =00;
+                $user_date =00;
+                $yaer = 00;
+                $month =00;
+                $day =00;
+                $m =00;
+                $d =00;
             ?>    
         });
     </script>
 </head>
   <body>
 
-  <?php
-        
-        
-        if(isset($_POST['submit']))
-        {
-                $hours_in_day   = 24;
-                $minutes_in_hour= 60;
-                $seconds_in_mins= 60;
-                
+  <?php 
+   if(isset($_POST['submit']))
+   {
+    $nic = $_POST['date'];
 
-                $datei = $_POST['B_date'];
-                
-                $birth_date     = new DateTime($datei);
-                $current_date   = new DateTime();
-                
-                $diff           = $birth_date->diff($current_date);
-                
-                
-                $years     = $diff->y; ;
-                $months    = ($diff->y * 12) + $diff->m ; 
-                $weeks     = floor($diff->days/7);
-                $days      = $diff->days; 
-                $hours     = $diff->h + ($diff->days * $hours_in_day); 
-                $mins      = $diff->h + ($diff->days * $hours_in_day * $minutes_in_hour) ; 
-                $seconds   = $diff->h + ($diff->days * $hours_in_day * $minutes_in_hour * $seconds_in_mins) ; 
+    $len = strlen($nic);
+
+    if ($len == 12)
+    {
+        $yaer = substr($nic,0,4);
+;
+
+        $month = substr ($nic,4,3);
+        if ($month >500)
+        {
+            $month = $month - 500;
         }
+        if($month >=0 && $month <=31)
+        {
+            $day = $month - 31;
+            $month = 01;
+        }
+        else if ($month >=32 && $month <=59)
+        {
+            $day = $month - 32;
+            $month = 02;
+        }
+        else if ($month >=60 && $month <=90)
+        {
+            $day = $month - 60;
+            $month = 03;
+        }
+        else if ($month >=91 && $month <=120)
+        {
+            $day = $month - 91;
+            $month = 04;
+        }
+        else if ($month >=121 && $month <=151)
+        {
+            $day = $month - 121;
+            $month = 05;
+        }
+
+        else if ($month >=152 && $month <=181)
+        {
+            $day = $month - 152;
+            $month = 06;
+        }
+        else if ($month >=182 && $month <=212)
+        {
+            $day = $month - 182;
+            $month = 07;
+        }
+        else if ($month >=213 && $month <=243)
+        {
+            $day = $month - 213;
+            $month = 8;
+        }
+        else if ($month >=244 && $month <=273)
+        {
+            $day = $month - 244;
+            $month =9;;
+        }
+        else if ($month >=274 && $month <=304)
+        {
+            $day = $month - 274;
+            $month = 10;
+        }
+        else if ($month >=305 && $month <=334)
+        {
+            $day = $month - 305;
+            $month = 11;
+        }
+        else if ($month >=335 && $month <=366)
+        {
+            $day = $month - 335;
+            $month = 12;
+        }
+   
+    }
+
+    
+
+    else if ($len == 10)
+    {
+        $oldnic = substr ($nic,0,2);
+        $yaer = $oldnic + 1900;
+
+
+        $month = substr ($nic,2,3);
+        if ($month >500)
+        {
+            $month = $month - 500;
+        }
+        if($month >=0 && $month <=31)
+        {
+            $day = $month - 0;
+            $month = 01;
+        }
+        else if ($month >=32 && $month <=59)
+        {
+            $day = $month - 32;
+            $month = 02;
+        }
+        else if ($month >=60 && $month <=90)
+        {
+            $day = $month - 60;
+            $month = 03;
+        }
+        else if ($month >=91 && $month <=120)
+        {
+            $day = $month - 91;
+            $month = 04;
+        }
+        else if ($month >=121 && $month <=151)
+        {
+            $day = $month - 121;
+            $month = 05;
+        }
+
+        else if ($month >=152 && $month <=181)
+        {
+            $day = $month - 152;
+            $month = 06;
+        }
+        else if ($month >=182 && $month <=212)
+        {
+            $day = $month - 182;
+            $month = 07;
+        }
+        else if ($month >=213 && $month <=243)
+        {
+            $day = $month - 213;
+            $month = "08";
+        }
+        else if ($month >=244 && $month <=273)
+        {
+            $day = $month - 244;
+            $month = "09";
+        }
+        else if ($month >=274 && $month <=304)
+        {
+            $day = $month - 274;
+            $month = 10;
+        }
+        else if ($month >=305 && $month <=334)
+        {
+            $day = $month - 305;
+            $month = 11;
+        }
+        else if ($month >=335 && $month <=366)
+        {
+            $day = $month - 335;
+            $month = 12;
+        }
+    }
+
+        else 
+        {
+            echo ("wrong NIc");
+        }
+   }
+
+        $user_date = $yaer. "-".$month."-".$day;
+
+	
+		$hours_in_day   = 24;
+        $minutes_in_hour= 60;
+        $seconds_in_mins= 60;
+                                
+        $birth_date     = new DateTime($user_date);
+        $current_date   = new DateTime();
                 
-        
-        
-    ?>
+        $diff           = $birth_date->diff($current_date);
+                
+                
+        $years     = $diff->y ; 
+        $m         = $diff->m;
+        $d         = $diff->d;
+        $months    = ($diff->y * 12) + $diff->m ; 
+        $weeks     = floor($diff->days/7);
+        $days      = $diff->days; 
+        $hours     = $diff->h + ($diff->days * $hours_in_day); 
+        $mins      = $diff->h + ($diff->days * $hours_in_day * $minutes_in_hour) ; 
+        $seconds   = $diff->h + ($diff->days * $hours_in_day * $minutes_in_hour * $seconds_in_mins) ; 
+
+
+?>
       
    <div class="container">
        <div class="row">
           <div class="col mt-3">
               <form method="post">
             
-                <input type="text" class="form-control" name="B_date" id="" placeholder="Plese Enter Your NIC number" Required>
+                <input type="text" class="form-control" name="date" id="" placeholder="Plese Enter Your NIC number" Required>
 
                 <div class="row ">
                     <div class="col mt-3">
@@ -80,7 +244,7 @@
            <div class="col-lg-6 mt-3">
                 <div class="card">
                     <ul class="list-group list-group-flush">
-                        <li class="list-group-item">
+                        <li class="list-group-item bg-dark text-white">
                         <div class="row">
                             <div class="col">Date of Birth : </div>
                         </div></li>
@@ -91,9 +255,9 @@
                         </div>
 
                         <div class="row text-center mt-1">
-                            <div class="col">1997</div>
-                            <div class="col">10</div>
-                            <div class="col">02</div>
+                            <div class="col"><?php echo $yaer ?></div>
+                            <div class="col"><?php echo $month ?></div>
+                            <div class="col"><?php echo $day ?></div>
                         </div>
                     </ul>
                 </div>
@@ -104,7 +268,7 @@
            <div class="col-lg-6 mt-3">
                 <div class="card">
                     <ul class="list-group list-group-flush">
-                        <li class="list-group-item">
+                        <li class="list-group-item bg-dark text-white">
                         <div class="row">
                             <div class="col">Age : </div>
                         </div></li>
@@ -115,9 +279,9 @@
                         </div>
 
                         <div class="row text-center mt-1">
-                            <div class="col">1997</div>
-                            <div class="col">10</div>
-                            <div class="col">02</div>
+                            <div class="col"><?php echo $years ?></div>
+                            <div class="col"><?php echo $m ?></div>
+                            <div class="col"><?php echo $d ?></div>
                         </div>
                     </ul>
                 </div>
@@ -128,7 +292,7 @@
            <div class="col-lg-6 mt-3">
                 <div class="card">
                     <ul class="list-group list-group-flush">
-                        <li class="list-group-item">
+                        <li class="list-group-item bg-dark text-white">
                         <div class="row">
                             <div class="col">Extra (Total) : </div>
                         </div></li>
@@ -141,10 +305,10 @@
                         </div>
 
                         <div class="row text-center mt-1">
-                            <div class="col">00</div>
-                            <div class="col">00</div>
-                            <div class="col">00</div>
-                            <div class="col">00</div>
+                            <div class="col"><?php echo $months ?></div>
+                            <div class="col"><?php echo $weeks ?></div>
+                            <div class="col"><?php echo  $days ?></div>
+                            <div class="col"><?php echo $hours ?></div>
                         </div>
                     </ul>
                 </div>
