@@ -267,7 +267,7 @@
 
        <div class="row">
 
-            <div class="col-lg-6 mt-3">
+            <div class="col-lg-6 mt-2">
                 <div class="card">
                     <ul class="list-group list-group-flush">
                         <li class="list-group-item bg-dark text-white">
@@ -283,7 +283,7 @@
            </div>
 
 
-           <div class="col-lg-6 mt-3">
+           <div class="col-lg-6 mt-2">
                 <div class="card">
                     <ul class="list-group list-group-flush">
                         <li class="list-group-item bg-dark text-white">
@@ -299,7 +299,7 @@
            </div>
 
 
-           <div class="col-lg-6 mt-3">
+           <div class="col-lg-6 mt-2">
                 <div class="card">
                     <ul class="list-group list-group-flush">
                         <li class="list-group-item bg-dark text-white">
@@ -323,7 +323,7 @@
 
            
 
-           <div class="col-lg-6 mt-3">
+           <div class="col-lg-6 mt-2">
                 <div class="card">
                     <ul class="list-group list-group-flush">
                         <li class="list-group-item bg-dark text-white">
@@ -347,7 +347,7 @@
 
 
 
-           <div class="col-lg-6 mt-3">
+           <div class="col-lg-6 mt-2">
                 <div class="card">
                     <ul class="list-group list-group-flush">
                         <li class="list-group-item bg-dark text-white">
