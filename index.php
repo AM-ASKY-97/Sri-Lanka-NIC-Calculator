@@ -223,7 +223,7 @@
 
 ?>
       
-   <div class="container">
+   <div class="container " style="background-color: #6a46bc;">
        <div class="row">
           <div class="col mt-3">
               <form method="post">
@@ -318,7 +318,7 @@
         </div>
 
         <!-- Footer -->
-        <div class="row text-center mt-2">
+        <div class="row text-center mt-4 mb-1">
                 <div class="col bg-dark text-light text-uppercase pt-3">
                     <h6>&#169 Copyright 2021. All right reserved. </h6> 
                     <p>| Designed By : <a href="https://am-asky-resume.herokuapp.com/"> A.M. Asky</a> </p>
