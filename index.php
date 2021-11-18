@@ -254,7 +254,7 @@
                             <div class="col">Day</div>
                         </div>
 
-                        <div class="row text-center mt-1">
+                        <div class="row text-center mt-1 mb-1">
                             <div class="col"><?php echo $yaer ?></div>
                             <div class="col"><?php echo $month ?></div>
                             <div class="col"><?php echo $day ?></div>
@@ -278,7 +278,7 @@
                             <div class="col">Day</div>
                         </div>
 
-                        <div class="row text-center mt-1">
+                        <div class="row text-center mt-1 mb-1">
                             <div class="col"><?php echo $years ?></div>
                             <div class="col"><?php echo $m ?></div>
                             <div class="col"><?php echo $d ?></div>
@@ -304,7 +304,7 @@
 
                         </div>
 
-                        <div class="row text-center mt-1">
+                        <div class="row text-center mt-1 mb-1">
                             <div class="col"><?php echo $months ?></div>
                             <div class="col"><?php echo $weeks ?></div>
                             <div class="col"><?php echo  $days ?></div>
@@ -318,7 +318,7 @@
         </div>
 
         <!-- Footer -->
-        <div class="row text-center mt-4 mb-1">
+        <div class="row text-center mt-4">
                 <div class="col bg-dark text-light text-uppercase pt-3">
                     <h6>&#169 Copyright 2021. All right reserved. </h6> 
                     <p>| Designed By : <a href="https://am-asky-resume.herokuapp.com/"> A.M. Asky</a> </p>
