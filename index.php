@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <title>Title</title>
+    <title>AGE CALCULATE</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -44,7 +44,8 @@
             
             $nic = $_POST['nic'];
 
-        
+            
+
             $len = strlen($nic);
 
             if ($len==12 || $len ==10)
@@ -267,12 +268,12 @@
 
        <div class="row">
 
-            <div class="col-lg-6 mt-2">
+            <div class="col-lg-6 mt-3">
                 <div class="card">
                     <ul class="list-group list-group-flush">
                         <li class="list-group-item bg-dark text-white">
                         <div class="row">
-                            <div class="col">Your nic number is: </div>
+                            <div class="col">Your nic number is : </div>
                         </div></li>
 
                         <div class="row text-center mt-3 mb-3">
@@ -283,7 +284,7 @@
            </div>
 
 
-           <div class="col-lg-6 mt-2">
+           <div class="col-lg-6 mt-3">
                 <div class="card">
                     <ul class="list-group list-group-flush">
                         <li class="list-group-item bg-dark text-white">
@@ -299,7 +300,7 @@
            </div>
 
 
-           <div class="col-lg-6 mt-2">
+           <div class="col-lg-6 mt-3">
                 <div class="card">
                     <ul class="list-group list-group-flush">
                         <li class="list-group-item bg-dark text-white">
@@ -323,7 +324,7 @@
 
            
 
-           <div class="col-lg-6 mt-2">
+           <div class="col-lg-6 mt-3">
                 <div class="card">
                     <ul class="list-group list-group-flush">
                         <li class="list-group-item bg-dark text-white">
@@ -347,7 +348,7 @@
 
 
 
-           <div class="col-lg-6 mt-2">
+           <div class="col-lg-6 mt-3">
                 <div class="card">
                     <ul class="list-group list-group-flush">
                         <li class="list-group-item bg-dark text-white">
