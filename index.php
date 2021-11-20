@@ -41,9 +41,6 @@
 
     <style>
         /* unvisited link */
-        a:link {
-        color: red;
-        }
 
         /* visited link */
         a:visited {
