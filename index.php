@@ -38,6 +38,29 @@
             ?>    
         });
     </script>
+
+    <style>
+        /* unvisited link */
+        a:link {
+        color: red;
+        }
+
+        /* visited link */
+        a:visited {
+        color: white;
+        }
+
+        /* mouse over link */
+        a:hover {
+            color: blue;
+        }
+
+        /* selected link */
+        a:active {
+            color: hotpink;
+        
+        }
+    </style>
 </head>
   <body style="font-family: 'Crimson Text', serif; font-size:16px;">
 
