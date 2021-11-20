@@ -7,7 +7,26 @@
     color: white;
 }
 
-.a{
-    color: white;
+
+/* unvisited link */
+a:link {
+  color: red;
 }
+
+/* visited link */
+a:visited {
+  color: white;
+}
+
+/* mouse over link */
+a:hover {
+    color: blue;
+}
+
+/* selected link */
+a:active {
+    color: hotpink;
+  
+}
+
 
