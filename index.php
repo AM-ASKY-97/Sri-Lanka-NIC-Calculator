@@ -427,7 +427,7 @@
         <div class="row text-center mt-4 ">
                 <div class="col bg-dark text-light text-uppercase pt-3">
                     <h6>&#169 Copyright 2021. All right reserved. </h6> 
-                    <p>| Designed By : <a href="https://am-asky-resume.herokuapp.com/"> A.M. Asky</a> </p>
+                    <p>| Designed By : <a href="http://am-asky97.herokuapp.com/"> A.M. Asky</a> </p>
                 </div>
             </div>
         <!-- End Footer -->
