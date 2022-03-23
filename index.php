@@ -303,12 +303,12 @@
                                 <div class="row text-center mt-3 mb-3">
                                     <div class="col-6">
                                         <input type="radio" name="nic" id="OLD" onclick="oldnic()">
-                                        <label for="OLD">OLD <spans>(Old nic 10 digit)</span></label>
+                                        <label for="OLD">OLD</label>
                                     </div>
 
                                     <div class="col-6">
                                         <input type="radio" name="nic" id="NEW" onclick="newnic()">
-                                        <label for="NEW">NEW (New nic 12 digit)</label>
+                                        <label for="NEW">NEW</label>
                                     </div>
                                 </div>
                             </ul>
