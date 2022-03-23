@@ -307,7 +307,17 @@
                 
                 <div class="row ">
                     <div class="col mt-3">
-                        <p id="check" class="check"></p>
+                        <div class="alert alert-success" id="success">
+                            <strong>Success!</strong> Your NIC number is valid.
+                        </div>
+
+                        <div class="alert alert-info" id="info">
+                            <strong>Info!</strong> Please Enter Your NIC Number.
+                        </div>
+
+                        <div class="alert alert-danger" id="danger">
+                            <strong>Danger!</strong> Your NIC number is invalid.
+                        </div>
                         <button type="submit" id="btn" class="btn btn-success text-center" name="submit" onclick="btnSubmit()">Calculate</button>
                     </div>
                 </div>
@@ -467,34 +477,42 @@
         
         document.getElementById("input").disabled = true;
 
+        document.getElementById("success").style.display = "none";
+        document.getElementById("info").style.display = "none";
+        document.getElementById("danger").style.display = "none";
+
         function myFunction()
         {
             if(input.value.length == 0)
             {
-                document.getElementById("check").innerHTML  = "Please Enter Your NIC Number";
-                document.getElementById("check").style.color = "red";
+                document.getElementById("info").style.display = "block";
+                document.getElementById("success").style.display = "none";
+                document.getElementById("danger").style.display = "none";
             }
 
             else if(document.getElementById('OLD').checked && input.value.length == 10)
             {
-                document.getElementById("check").innerHTML  = "Your NIC number is valid";
-                document.getElementById("check").style.color = "green";
+                document.getElementById("success").style.display = "block";
+                document.getElementById("info").style.display = "none";
+                document.getElementById("danger").style.display = "none";
                 document.getElementById("input").style.color= "green";
                 document.getElementById("input").style.borderColor = "green";
             }
 
             else if(document.getElementById('NEW').checked && input.value.length == 12)
             {
-                document.getElementById("check").innerHTML  = "Your NIC number is valid";
-                document.getElementById("check").style.color = "green";
+                document.getElementById("success").style.display = "block";
+                document.getElementById("info").style.display = "none";
+                document.getElementById("danger").style.display = "none";   
                 document.getElementById("input").style.color= "green";
                 document.getElementById("input").style.borderColor = "green";
             }
 
             else
             {
-                document.getElementById("check").innerHTML  = "Your NIC number is invalid";
-                document.getElementById("check").style.color = "red";
+                document.getElementById("danger").style.display = "block";
+                document.getElementById("success").style.display = "none";
+                document.getElementById("info").style.display = "none";
                 document.getElementById("input").style.color= "red";
                 document.getElementById("input").style.borderColor = "red";
             }
@@ -504,7 +522,6 @@
         {
             document.getElementById("input").value="";
             document.getElementById("input").focus();
-            document.getElementById("check").innerHTML =" ";
             document.getElementById("input").disabled = false;
             document.getElementById("input").maxLength = "10";
 
@@ -515,7 +532,6 @@
         {
             document.getElementById("input").value="";
             document.getElementById("input").focus();
-            document.getElementById("check").innerHTML =" ";
             document.getElementById("input").disabled = false;
             document.getElementById("input").maxLength = "12";
         }
