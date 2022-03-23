@@ -276,12 +276,39 @@
        <div class="row">
           <div class="col mt-3">
               <form method="post" autocomplete="off">
-            
-                <input type="text" class="form-control" name="nic" id="" placeholder="Please Enter Your NIC number" Required>
 
+                <div class="row">
+                    <div class="col mt-3 mb-3">
+                        <div class="card">
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item bg-dark text-white">
+                                <div class="row">
+                                    <div class="col">Is your number old or new? </div>
+                                </div></li>
+
+                                <div class="row text-center mt-3 mb-3">
+                                    <div class="col-6">
+                                        <input type="radio" name="nic" id="OLD" onclick="oldnic()">
+                                        <label for="OLD">OLD (Old nic 10 digit)</label>
+                                    </div>
+
+                                    <div class="col-6">
+                                        <input type="radio" name="nic" id="NEW" onclick="newnic()">
+                                        <label for="NEW">NEW (New nic 12 digit)</label>
+                                    </div>
+                                </div>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            
+                <input type="text" class="form-control" name="nic" id="input" placeholder="Please Enter Your NIC number" oninput="myFunction()">
+                
                 <div class="row ">
                     <div class="col mt-3">
-                        <button type="submit" id="btn" class="btn btn-success text-center" name="submit" >Calculate</button>
+                        <p id="check"></p>
+                        <button type="submit" id="btn" class="btn btn-success text-center" name="submit" onclick="btnSubmit()">Calculate</button>
                     </div>
                 </div>
 
@@ -435,7 +462,63 @@
     </div>
 
     
+    <script>
+        var input = document.getElementById("input");
+        
+        document.getElementById("input").disabled = true;
 
+        function myFunction()
+        {
+            if(input.value.length == 10)
+            {
+                document.getElementById("check").innerHTML  = "Your NIC number is valid";
+                document.getElementById("check").style.color = "green";
+                document.getElementById("input").style.color= "green";
+                document.getElementById("input").style.borderColor = "green";
+            }
+
+            else if(input.value.length == 12)
+            {
+                document.getElementById("check").innerHTML  = "Your NIC number is valid";
+                document.getElementById("check").style.color = "green";
+                document.getElementById("input").style.color= "green";
+                document.getElementById("input").style.borderColor = "green";
+            }
+
+            else
+            {
+                document.getElementById("check").innerHTML  = "Your number is invalid";
+                document.getElementById("check").style.color = "red";
+                document.getElementById("input").style.color= "red";
+                document.getElementById("input").style.borderColor = "red";
+            }
+        }
+        
+        function oldnic()
+        {
+            document.getElementById("input").value="";
+            document.getElementById("input").focus();
+            document.getElementById("check").innerHTML =" ";
+            document.getElementById("input").disabled = false;
+            document.getElementById("input").maxLength = "10";
+
+            
+        }
+
+        function newnic()
+        {
+            document.getElementById("input").value="";
+            document.getElementById("input").focus();
+            document.getElementById("check").innerHTML =" ";
+            document.getElementById("input").disabled = false;
+            document.getElementById("input").maxLength = "12";
+        }
+
+        function btnSubmit()
+        {
+            alert ("please Enter Your NIC Number");
+        }
+    </script>
   
     
     <!-- Optional JavaScript -->
