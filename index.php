@@ -61,6 +61,8 @@
 </head>
   <body style="font-family: 'Crimson Text', serif; font-size:16px;">
 
+   
+
   <?php
         
         if(isset($_POST['submit']))
@@ -273,12 +275,24 @@
     ?>
 
    <div class="container " style="background-color: #6a46bc;">
+
+       <div class="row">
+           <div class="col">
+              
+            <div class="row text-center">
+                <div class="col bg-dark text-light p-2">
+                    <h1>Welcome to my website </h1>
+                </div>
+            </div>
+
+           </div>
+       </div>
        <div class="row">
           <div class="col mt-3">
               <form method="post" autocomplete="off">
 
                 <div class="row">
-                    <div class="col mt-3 mb-3">
+                    <div class="col mt-2 mb-3">
                         <div class="card">
                             <ul class="list-group list-group-flush">
                                 <li class="list-group-item bg-dark text-white">
