@@ -307,7 +307,7 @@
                 
                 <div class="row ">
                     <div class="col mt-3">
-                        <p id="check"></p>
+                        <p id="check" class="check"></p>
                         <button type="submit" id="btn" class="btn btn-success text-center" name="submit" onclick="btnSubmit()">Calculate</button>
                     </div>
                 </div>
@@ -469,7 +469,13 @@
 
         function myFunction()
         {
-            if(document.getElementById('OLD').checked && input.value.length == 10)
+            if(input.value.length == 0)
+            {
+                document.getElementById("check").innerHTML  = "Please Enter Your NIC Number";
+                document.getElementById("check").style.color = "red";
+            }
+
+            else if(document.getElementById('OLD').checked && input.value.length == 10)
             {
                 document.getElementById("check").innerHTML  = "Your NIC number is valid";
                 document.getElementById("check").style.color = "green";
