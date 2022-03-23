@@ -57,6 +57,11 @@
             color: hotpink;
         
         }
+
+        .badge-pill{
+            padding:7px 22px 7px 22px;
+            cursor: pointer;
+        }
     </style>
 </head>
   <body style="font-family: 'Crimson Text', serif; font-size:16px;">
