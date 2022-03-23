@@ -469,7 +469,7 @@
 
         function myFunction()
         {
-            if(input.value.length == 10)
+            if(document.getElementById('OLD').checked && input.value.length == 10)
             {
                 document.getElementById("check").innerHTML  = "Your NIC number is valid";
                 document.getElementById("check").style.color = "green";
@@ -477,7 +477,7 @@
                 document.getElementById("input").style.borderColor = "green";
             }
 
-            else if(input.value.length == 12)
+            else if(document.getElementById('NEW').checked && input.value.length == 12)
             {
                 document.getElementById("check").innerHTML  = "Your NIC number is valid";
                 document.getElementById("check").style.color = "green";
@@ -487,7 +487,7 @@
 
             else
             {
-                document.getElementById("check").innerHTML  = "Your number is invalid";
+                document.getElementById("check").innerHTML  = "Your NIC number is invalid";
                 document.getElementById("check").style.color = "red";
                 document.getElementById("input").style.color= "red";
                 document.getElementById("input").style.borderColor = "red";
