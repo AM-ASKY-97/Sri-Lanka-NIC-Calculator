@@ -274,22 +274,24 @@
         }
     ?>
 
-   <div class="container " style="background-color: #6a46bc;">
-
-       <div class="row">
-           <div class="col">
-              
+    <div class="container-fluid" style="background-color: #6a46bc;">
+        <div class="row">
+            <div class="col">
+            
             <div class="row text-center">
                 <div class="col bg-dark text-light p-2">
                     <h1>Welcome to my web application </h1>
                 </div>
             </div>
 
-           </div>
-       </div>
-       <div class="row">
-          <div class="col mt-3">
-              <form method="post" autocomplete="off">
+            </div>
+        </div>
+        <div class="container border rounded-lg">
+
+        
+        <div class="row">
+        <div class="col mt-3">
+            <form method="post" autocomplete="off">
 
                 <div class="row">
                     <div class="col mt-2 mb-3">
@@ -303,12 +305,14 @@
                                 <div class="row text-center mt-3 mb-3">
                                     <div class="col-6">
                                         <input type="radio" name="nic" id="OLD" onclick="oldnic()">
-                                        <label for="OLD">OLD</label>
+                                        <label for="OLD" id="old"><span class="badge badge-pill badge-danger">Old</span>  </label>
+                                        <label for="OLD" id="oldSuccess"><span class="badge badge-pill badge-success">Old</span>  </label>
                                     </div>
 
                                     <div class="col-6">
                                         <input type="radio" name="nic" id="NEW" onclick="newnic()">
-                                        <label for="NEW">NEW</label>
+                                        <label for="NEW" id="new"><span class="badge badge-pill badge-danger">New</span></label>
+                                        <label for="NEW" id="newSuccess"><span class="badge badge-pill badge-success">New</span></label>
                                     </div>
                                 </div>
                             </ul>
@@ -322,31 +326,31 @@
                 <div class="row ">
                     <div class="col mt-3">
                         <div class="alert alert-success" id="success">
-                            <strong>Success!</strong> Your NIC number is valid.
+                            <strong>Your NIC number is valid!</strong> 
                         </div>
 
                         <div class="alert alert-info" id="info">
-                            <strong>Info!</strong> Please Enter Your NIC Number.
+                            <strong>Please Enter Your NIC Number!</strong> 
                         </div>
 
                         <div class="alert alert-danger" id="danger">
-                            <strong>Danger!</strong> Your NIC number is invalid.
+                            <strong>Your NIC number is invalid!</strong> 
                         </div>
 
                         <div class="alert alert-danger" id="Error-01">
-                            <strong>Danger!</strong> Enter your valid NIC number. 
+                            <strong>Enter your valid NIC number!</strong> 
                         </div>
                         <button type="submit" id="btnSubmit" class="btn btn-success text-center btn-block" name="submit" onclick="btnSubmit()">Calculate</button>
-                        <button type="button" id="btnDanger" class="btn btn-danger text-center btn-block" name="" onclick="btnError()">Processing......</button>
+                        <button type="button" id="btnDanger" class="btn btn-danger  text-center btn-block" name="" onclick="btnError()">Processing......</button>
                         <button type="button" id="btnWarning-01" class="btn btn-warning text-center btn-block" name="" onclick="btnError()">Loading......</button>
                     </div>
                 </div>
 
-              </form>
+            </form>
             </div>
-       </div>
+        </div>
 
-       <div class="row">
+        <div class="row">
 
             <div class="col-lg-6 mt-3">
                 <div class="card">
@@ -361,10 +365,10 @@
                         </div>
                     </ul>
                 </div>
-           </div>
+            </div>
 
 
-           <div class="col-lg-6 mt-3">
+            <div class="col-lg-6 mt-3">
                 <div class="card">
                     <ul class="list-group list-group-flush">
                         <li class="list-group-item bg-dark text-white">
@@ -377,10 +381,10 @@
                         </div>
                     </ul>
                 </div>
-           </div>
+            </div>
 
 
-           <div class="col-lg-6 mt-3">
+            <div class="col-lg-6 mt-3">
                 <div class="card">
                     <ul class="list-group list-group-flush">
                         <li class="list-group-item bg-dark text-white">
@@ -400,11 +404,11 @@
                         </div>
                     </ul>
                 </div>
-           </div>
+            </div>
 
-           
+            
 
-           <div class="col-lg-6 mt-3">
+            <div class="col-lg-6 mt-3">
                 <div class="card">
                     <ul class="list-group list-group-flush">
                         <li class="list-group-item bg-dark text-white">
@@ -424,11 +428,11 @@
                         </div>
                     </ul>
                 </div>
-           </div>
+            </div>
 
 
 
-           <div class="col-lg-6 mt-3">
+            <div class="col-lg-6 mt-3">
                 <div class="card">
                     <ul class="list-group list-group-flush">
                         <li class="list-group-item bg-dark text-white">
@@ -446,15 +450,15 @@
                             <div class="col"><?php echo $months ?></div>
                             <div class="col"><?php echo $weeks ?></div>
                             <div class="col"><?php echo  $days ?></div>
-                           
+                            
                         </div>
                     </ul>
                 </div>
-           </div>
+            </div>
 
 
 
-           <div class="col-lg-6 mt-3">
+            <div class="col-lg-6 mt-3 mb-3">
                 <div class="card">
                     <ul class="list-group list-group-flush">
                         <li class="list-group-item bg-dark text-white">
@@ -476,19 +480,18 @@
                         </div>
                     </ul>
                 </div>
-           </div>
+            </div>
 
         </div>
-
-        <!-- Footer -->
-        <div class="row text-center mt-4 ">
+    </div>
+         <!-- Footer -->
+         <div class="row text-center">
                 <div class="col bg-dark text-light text-uppercase pt-3">
                     <h6>&#169 Copyright 2021. All right reserved. </h6> 
                     <p>| Designed By : <a href="http://am-asky97.herokuapp.com/"> A.M. Asky</a> </p>
                 </div>
             </div>
         <!-- End Footer -->
-        
     </div>
 
     
@@ -502,6 +505,9 @@
         document.getElementById("danger").style.display = "none";
         document.getElementById("Error-01").style.display = "none";
         
+        document.getElementById("newSuccess").style.display = "none";
+        document.getElementById("oldSuccess").style.display = "none";
+
 
         document.getElementById("btnSubmit").style.display = "none";
         document.getElementById("btnWarning-01").style.display = "none";
@@ -513,6 +519,7 @@
                 document.getElementById("info").style.display = "block";
                 document.getElementById("success").style.display = "none";
                 document.getElementById("danger").style.display = "none";
+                document.getElementById("Error-01").style.display = "none";
             }
 
             else if(document.getElementById('OLD').checked && input.value.length == 10 && input.value.charAt(9)== "v" || input.value.charAt(9)== "V"
@@ -523,6 +530,7 @@
                 document.getElementById("danger").style.display = "none";
                 document.getElementById("input").style.color= "green";
                 document.getElementById("input").style.borderColor = "green";
+                document.getElementById("Error-01").style.display = "none";
             }
 
             else if(document.getElementById('NEW').checked && input.value.length == 12)
@@ -532,6 +540,7 @@
                 document.getElementById("danger").style.display = "none";   
                 document.getElementById("input").style.color= "green";
                 document.getElementById("input").style.borderColor = "green";
+                document.getElementById("Error-01").style.display = "none";
             }
 
             else
@@ -541,6 +550,7 @@
                 document.getElementById("info").style.display = "none";
                 document.getElementById("input").style.color= "red";
                 document.getElementById("input").style.borderColor = "red";
+                document.getElementById("Error-01").style.display = "none";
                 
             }
 
@@ -593,6 +603,12 @@
             document.getElementById("info").style.display = "none";
             document.getElementById("danger").style.display = "none";
             document.getElementById("Error-01").style.display = "none";
+            document.getElementById("oldSuccess").style.display = "block";
+            document.getElementById("old").style.display = "none";
+
+            document.getElementById("newSuccess").style.display = "none";
+            document.getElementById("new").style.display = "block";
+        
         }
 
         function newnic()
@@ -605,6 +621,11 @@
             document.getElementById("info").style.display = "none";
             document.getElementById("danger").style.display = "none";
             document.getElementById("Error-01").style.display = "none";
+            document.getElementById("newSuccess").style.display = "block";
+            document.getElementById("new").style.display = "none";
+
+            document.getElementById("oldSuccess").style.display = "none";
+            document.getElementById("old").style.display = "block";
         }
 
         function btnSubmit()
@@ -618,7 +639,10 @@
         function btnError()
         {
             document.getElementById("Error-01").style.display = "block";
+            document.getElementById("info").style.display = "none";
             document.getElementById("input").focus();
+            document.getElementById("success").style.display = "none";
+            document.getElementById("danger").style.display = "none";
         }
 
     </script>
@@ -629,5 +653,6 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-  </body>
+  
+</body>
 </html>
