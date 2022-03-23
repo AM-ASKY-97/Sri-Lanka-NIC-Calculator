@@ -516,7 +516,11 @@
 
         function btnSubmit()
         {
-            alert ("please Enter Your NIC Number");
+            if (input.value.length ==0)
+            {
+                alert ("please Enter Your NIC Number");
+            }
+            
         }
     </script>
   
