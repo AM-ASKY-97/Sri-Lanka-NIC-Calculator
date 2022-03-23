@@ -281,7 +281,7 @@
               
             <div class="row text-center">
                 <div class="col bg-dark text-light p-2">
-                    <h1>Welcome to my website </h1>
+                    <h1>Welcome to my web application </h1>
                 </div>
             </div>
 
@@ -303,7 +303,7 @@
                                 <div class="row text-center mt-3 mb-3">
                                     <div class="col-6">
                                         <input type="radio" name="nic" id="OLD" onclick="oldnic()">
-                                        <label for="OLD">OLD (Old nic 10 digit)</label>
+                                        <label for="OLD">OLD <spans>(Old nic 10 digit)</span></label>
                                     </div>
 
                                     <div class="col-6">
@@ -332,7 +332,13 @@
                         <div class="alert alert-danger" id="danger">
                             <strong>Danger!</strong> Your NIC number is invalid.
                         </div>
-                        <button type="submit" id="btn" class="btn btn-success text-center" name="submit" onclick="btnSubmit()">Calculate</button>
+
+                        <div class="alert alert-danger" id="Error-01">
+                            <strong>Danger!</strong> Enter your valid NIC number. 
+                        </div>
+                        <button type="submit" id="btnSubmit" class="btn btn-success text-center btn-block" name="submit" onclick="btnSubmit()">Calculate</button>
+                        <button type="button" id="btnDanger" class="btn btn-danger text-center btn-block" name="" onclick="btnError()">Processing......</button>
+                        <button type="button" id="btnWarning-01" class="btn btn-warning text-center btn-block" name="" onclick="btnError()">Loading......</button>
                     </div>
                 </div>
 
@@ -494,7 +500,12 @@
         document.getElementById("success").style.display = "none";
         document.getElementById("info").style.display = "none";
         document.getElementById("danger").style.display = "none";
+        document.getElementById("Error-01").style.display = "none";
+        
 
+        document.getElementById("btnSubmit").style.display = "none";
+        document.getElementById("btnWarning-01").style.display = "none";
+        
         function myFunction()
         {
             if(input.value.length == 0)
@@ -504,7 +515,8 @@
                 document.getElementById("danger").style.display = "none";
             }
 
-            else if(document.getElementById('OLD').checked && input.value.length == 10)
+            else if(document.getElementById('OLD').checked && input.value.length == 10 && input.value.charAt(9)== "v" || input.value.charAt(9)== "V"
+            || input.value.charAt(9)== "x" || input.value.charAt(9)== "X")
             {
                 document.getElementById("success").style.display = "block";
                 document.getElementById("info").style.display = "none";
@@ -529,7 +541,46 @@
                 document.getElementById("info").style.display = "none";
                 document.getElementById("input").style.color= "red";
                 document.getElementById("input").style.borderColor = "red";
+                
             }
+
+            if(input.value.length > 5 && input.value.length <10)
+            {
+                document.getElementById("btnWarning-01").style.display = "Block";
+                document.getElementById("btnDanger").style.display = "none";
+                document.getElementById("btnSubmit").style.display = "none";
+            }
+
+            else if(input.value.length == 10 && input.value.charAt(9)== "v")
+            {
+                document.getElementById("btnSubmit").style.display = "block";
+                document.getElementById("btnWarning-01").style.display = "none";
+                document.getElementById("btnDanger").style.display = "none";
+            }
+
+            else if(input.value.length >= 10 && input.value.length < 12)
+            {
+                document.getElementById("btnWarning-01").style.display = "Block";
+                document.getElementById("btnDanger").style.display = "none";
+                document.getElementById("btnSubmit").style.display = "none";
+            }
+
+            else if(input.value.length == 12)
+            {
+                document.getElementById("btnSubmit").style.display = "block";
+                document.getElementById("btnWarning-01").style.display = "none";
+                document.getElementById("btnDanger").style.display = "none";
+            }
+
+            else 
+            {
+                document.getElementById("btnDanger").style.display = "block";
+                document.getElementById("btnSubmit").style.display = "none";
+                document.getElementById("btnWarning-01").style.display = "none";
+            }
+           
+
+           
         }
         
         function oldnic()
@@ -538,8 +589,10 @@
             document.getElementById("input").focus();
             document.getElementById("input").disabled = false;
             document.getElementById("input").maxLength = "10";
-
-            
+            document.getElementById("success").style.display = "none";
+            document.getElementById("info").style.display = "none";
+            document.getElementById("danger").style.display = "none";
+            document.getElementById("Error-01").style.display = "none";
         }
 
         function newnic()
@@ -548,16 +601,26 @@
             document.getElementById("input").focus();
             document.getElementById("input").disabled = false;
             document.getElementById("input").maxLength = "12";
+            document.getElementById("success").style.display = "none";
+            document.getElementById("info").style.display = "none";
+            document.getElementById("danger").style.display = "none";
+            document.getElementById("Error-01").style.display = "none";
         }
 
         function btnSubmit()
         {
             if (input.value.length ==0)
             {
-                alert ("please Enter Your NIC Number");
-            }
-            
+                alert ("Enter your valid NIC number");
+            }   
         }
+
+        function btnError()
+        {
+            document.getElementById("Error-01").style.display = "block";
+            document.getElementById("input").focus();
+        }
+
     </script>
   
     
