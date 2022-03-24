@@ -672,6 +672,7 @@
             document.getElementById("input").focus();
             document.getElementById("success").style.display = "none";
             document.getElementById("danger").style.display = "none";
+            document.getElementById("must").style.display = "none";
         }
 
     </script>
