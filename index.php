@@ -554,6 +554,8 @@
                     document.getElementById("info").style.display = "none";
                     document.getElementById("danger").style.display = "none";
                     document.getElementById("Error-01").style.display = "none";
+                    document.getElementById("input").style.color= "red";
+                    document.getElementById("input").style.borderColor = "red";
                     return false;
                 }
                 
