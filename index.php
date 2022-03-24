@@ -590,7 +590,7 @@
                 document.getElementById("btnSubmit").style.display = "none";
             }
 
-            else if(input.value.length == 10 && input.value.charAt(9)== "v")
+            else if(input.value.length == 10 && input.value.charAt(9)== "v" || input.value.charAt(9)== "V" || input.value.charAt(9)== "x" || input.value.charAt(9)== "X")
             {
                 document.getElementById("btnSubmit").style.display = "block";
                 document.getElementById("btnWarning-01").style.display = "none";
