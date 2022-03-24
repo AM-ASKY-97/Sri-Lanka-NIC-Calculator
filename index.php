@@ -345,6 +345,10 @@
                         <div class="alert alert-danger" id="Error-01">
                             <strong>Enter your valid NIC number!</strong> 
                         </div>
+
+                        <div class="alert alert-danger" id="must">
+                            <strong>Must input numbers</strong> 
+                        </div>
                         <button type="submit" id="btnSubmit" class="btn btn-success text-center btn-block" name="submit" onclick="btnSubmit()">Calculate</button>
                         <button type="button" id="btnDanger" class="btn btn-danger  text-center btn-block" name="" onclick="btnError()">Processing......</button>
                         <button type="button" id="btnWarning-01" class="btn btn-warning text-center btn-block" name="" onclick="btnError()">Loading......</button>
@@ -509,6 +513,7 @@
         document.getElementById("info").style.display = "none";
         document.getElementById("danger").style.display = "none";
         document.getElementById("Error-01").style.display = "none";
+        document.getElementById("must").style.display = "none";
         
         document.getElementById("newSuccess").style.display = "none";
         document.getElementById("oldSuccess").style.display = "none";
@@ -525,6 +530,7 @@
                 document.getElementById("success").style.display = "none";
                 document.getElementById("danger").style.display = "none";
                 document.getElementById("Error-01").style.display = "none";
+                document.getElementById("must").style.display = "none";
             }
 
             else if(document.getElementById('OLD').checked && input.value.length == 10 && input.value.charAt(9)== "v" || input.value.charAt(9)== "V"
@@ -536,16 +542,31 @@
                 document.getElementById("input").style.color= "green";
                 document.getElementById("input").style.borderColor = "green";
                 document.getElementById("Error-01").style.display = "none";
+                document.getElementById("must").style.display = "none";
             }
 
             else if(document.getElementById('NEW').checked && input.value.length == 12)
             {
-                document.getElementById("success").style.display = "block";
-                document.getElementById("info").style.display = "none";
-                document.getElementById("danger").style.display = "none";   
-                document.getElementById("input").style.color= "green";
-                document.getElementById("input").style.borderColor = "green";
-                document.getElementById("Error-01").style.display = "none";
+                if (isNaN(input.value)) 
+                {
+                    document.getElementById("must").style.display = "block";
+                    document.getElementById("success").style.display = "none";
+                    document.getElementById("info").style.display = "none";
+                    document.getElementById("danger").style.display = "none";
+                    document.getElementById("Error-01").style.display = "none";
+                    return false;
+                }
+                
+                else
+                {
+                    document.getElementById("success").style.display = "block";
+                    document.getElementById("info").style.display = "none";
+                    document.getElementById("danger").style.display = "none";   
+                    document.getElementById("input").style.color= "green";
+                    document.getElementById("input").style.borderColor = "green";
+                    document.getElementById("Error-01").style.display = "none";
+                    document.getElementById("must").style.display = "none";
+                }
             }
 
             else
@@ -556,6 +577,7 @@
                 document.getElementById("input").style.color= "red";
                 document.getElementById("input").style.borderColor = "red";
                 document.getElementById("Error-01").style.display = "none";
+                document.getElementById("must").style.display = "none";
                 
             }
 
