@@ -2,7 +2,7 @@
 
 ### Introduction
 
-<p align="justify">Calculate the Date of Birth, age , gender and Living hours thorough the Sri Lankan NIC</p>
+<p align="justify">The date of birth, age, gender, and life time can be calculated from the Sri Lankan National Identity Card.</p>
 
 <p align="justify">Used Stack : HTML 5, CSS, Bootstrap, PHP, JavaScript</p>
 
