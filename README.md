@@ -2,7 +2,8 @@
 
 ### Introduction
 
-<p align="justify">The date of birth, age, gender, and Living hours can be calculated from the Sri Lankan National Identity Card.</p>
+<p align="justify">This app used for calculate our DOB, age, gender and living hours using by NIC number.
+</p>
 
 <p align="justify">Used Stack : HTML 5, CSS, Bootstrap, PHP, JavaScript</p>
 
