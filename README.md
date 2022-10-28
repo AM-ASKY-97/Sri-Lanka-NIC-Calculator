@@ -2,8 +2,7 @@
 
 ### Introduction
 
-<p align="justify">This app used for calculate our DOB, age, gender and living hours using by NIC number.
-</p>
+<p align="justify">This app is used to calculate our date of birth, age, gender and living hours using our NIC number.</p>
 
 <p align="justify">Used Stack : HTML 5, CSS, Bootstrap, PHP, JavaScript</p>
 
