@@ -496,7 +496,7 @@
          <!-- Footer -->
          <div class="row text-center">
                 <div class="col bg-dark text-light text-uppercase p-3">
-                    <h6>&#169 Copyright 2021. All right reserved. | Designed By : <a href="http://am-asky97.herokuapp.com/"> A.M. Asky</a></h6> 
+                    <h6>&#169 Copyright 2021. All right reserved. Designed By : <a href="http://am-asky97.herokuapp.com/"> Asky AM</a></h6> 
                 </div>
             </div>
         <!-- End Footer -->
